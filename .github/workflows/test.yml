@@ -24,9 +24,9 @@ jobs:
       uses: actions/cache@v2
       with:
         path: ~/.pnpm-store
-        key: lint-${{ hashFiles('**/pnpm-lock.yaml') }}
+        key: build-${{ hashFiles('**/pnpm-lock.yaml') }}
         restore-keys: |
-          lint-
+          build-
 
     - uses: pnpm/action-setup@v2.0.1
       with:
@@ -55,9 +55,9 @@ jobs:
       uses: actions/cache@v2
       with:
         path: ~/.pnpm-store
-        key: spellcheck-${{ hashFiles('**/pnpm-lock.yaml') }}
+        key: build-${{ hashFiles('**/pnpm-lock.yaml') }}
         restore-keys: |
-          spellcheck-
+          build-
 
     - uses: pnpm/action-setup@v2.0.1
       with:
