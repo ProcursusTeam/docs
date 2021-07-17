@@ -1,0 +1,17 @@
+Makefile
+Procursus
+A7
+A11
+Odysseyra1n
+A8
+macOS
+Sur
+Taurine
+FreeBSD
+triehash
+AUR
+toolchain
+libtapi
+cctools
+rustup
+ldid

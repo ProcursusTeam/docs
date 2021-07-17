@@ -1,0 +1,38 @@
+{
+  "name": "@procursus/docs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "dev": "vuepress dev",
+    "build": "vuepress build",
+    "lint": "markdownlint '**/*.md'",
+    "lint:fix": "markdownlint -f '**/*.md'",
+    "spellcheck": "spellchecker --config .spellcheckerrc.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ProcususTeam/docs.git"
+  },
+  "author": "ProcursusTeam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ProcususTeam/docs/issues"
+  },
+  "homepage": "https://github.com/ProcususTeam/docs#readme",
+  "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.8.2",
+    "markdown-it-multimd-table": "^4.1.0",
+    "markdown-link-check": "^3.8.7",
+    "markdownlint-cli": "^0.27.1",
+    "spellchecker-cli": "^4.8.0",
+    "vuepress": "^1.8.2",
+    "vuepress-bar": "^0.4.2",
+    "vuepress-plugin-code-copy": "^1.0.6",
+    "vuepress-plugin-flexsearch": "^0.2.0",
+    "vuepress-plugin-medium-zoom": "^1.1.9",
+    "vuepress-plugin-smooth-scroll": "^0.0.10",
+    "vuepress-theme-succinct": "^1.7.2"
+  }
+}
