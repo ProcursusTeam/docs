@@ -1,6 +1,6 @@
 # GITHUB_ARCHIVE
 
-This function is used to download a Github archive of a specific project. The following table showcases documentation for parameters used by this function
+This function is used to download a GitHub archive of a specific project. The following table showcases documentation for parameters used by this function
 
 ## Arguments
 

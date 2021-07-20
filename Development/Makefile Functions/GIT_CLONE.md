@@ -1,6 +1,6 @@
 # GIT_CLONE
 
-Like ``GITHUB_ARCHIVE``, except this function extends support for projects that are outside of Github or don't provide any release tarballs. Below is more documentation about specific parameters
+Like ``GITHUB_ARCHIVE``, except this function extends support for projects that are outside of GitHub or don't provide any release tarballs. Below is more documentation about specific parameters
 
 ## Arguments
 

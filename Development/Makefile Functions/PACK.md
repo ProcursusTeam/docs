@@ -2,7 +2,7 @@
 
 This functions creates a Debian package with ``dpkg`` or ``dm.pl`` for a given project. The table below showcases all parameters required for the function to work
 
-## Arguments 
+## Arguments
 
 | Index | Description |
 |-------|-------------|
