@@ -10,11 +10,12 @@ You'll need to use a [jailbreak using Procursus](../../../Installation/iOS.md)
 
 ### macOS
 
-[Installation Guide](../../../Installation/macOS.md)
+You should follow the [installation guide](../../../Installation/macOS.md)
 
 ## Install Dependencies
 
-```bash
+```
+bash
 apt install ...
 ```
 
