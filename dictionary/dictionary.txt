@@ -13,6 +13,14 @@ A12X
 A12Z
 A13
 A14
+CoreFoundation
+GPG
+SDK
+SDKs
+LTO
+cctools-port
+config
+NodeJS
 Odysseyra1n
 macOS
 Sur

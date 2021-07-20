@@ -28,7 +28,7 @@ To run the script
 bash procursus-utils-fbsd.sh
 ```
 
-It's recommended that you add this script to your shells' config file, so that it's sourced on every enviorment on login.
+It's recommended that you add this script to your shells' config file, so that it's sourced on every environment on login.
 
 ```
 echo "source procursus-utils-fbsd.sh" > .profile
