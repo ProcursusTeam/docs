@@ -1,4 +1,5 @@
 # EXTRACT_TAR
+
 This function is used to extract a tarball downloaded through ``wget`` or ``GITHUB_ARCHIVE``. The table below documents the 3 arguments that this function requires
 
 ## Arguments
@@ -18,4 +19,4 @@ The function does not take direct paths; the first argument looks for tarballs i
     $(call GITHUB_ARCHIVE,quiprr,appuninst,$(APPUNINST_VERSION),v$(APPUNINST_VERSION))
     $(call EXTRACT_TAR,appuninst-$(APPUNINST_VERSION).tar.gz,appuninst-$(APPUNINST_VERSION),appuninst)
 
-The example above extracts the tarball downloaded from Github into ``build_source/appuninst-$(APPUNINST_VERSION)`` — then, those files are copied to ``build_work/appuninst``.
+The example above extracts the tarball downloaded from GitHub into ``build_source/appuninst-$(APPUNINST_VERSION)`` — then, those files are copied to ``build_work/appuninst``.

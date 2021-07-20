@@ -24,6 +24,8 @@ NodeJS
 Odysseyra1n
 macOS
 Sur
+GitHub
+GITHUB_ARCHIVE
 Taurine
 FreeBSD
 triehash
