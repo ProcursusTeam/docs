@@ -26,6 +26,8 @@ macOS
 Sur
 GitHub
 GITHUB_ARCHIVE
+Procursus-enabled
+Homebrew
 Taurine
 FreeBSD
 triehash
