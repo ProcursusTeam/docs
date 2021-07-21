@@ -12,11 +12,10 @@ sudo apt install clang dsymutil odcctools autoconf automake autopoint bash bison
 
 ### macOS
 
-<!-- You should follow the [installation guide](../../../Installation/macOS.md) -->
-You should have Homebrew installed on your Mac. Once you do, run the following to get the dependencies.
+You should follow the [installation guide](../../../Installation/macOS.md). Once that's done, you can use the same dependency list:
 
 ```bash
-A list of dependencies is being built
+sudo apt install clang dsymutil odcctools autoconf automake autopoint bash bison cmake docbook-xml docbook-xsl fakeroot findutils flex gawk git gnupg groff gzip ldid libtool make ncurses-bin openssl patch pkg-config po4a python3 sed tar triehash wget xz-utils zstd
 ```
 
 ## Clone
