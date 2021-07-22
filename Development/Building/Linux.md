@@ -1,6 +1,6 @@
 # Building on Linux
 
-## Installing Dependencies
+## Installing dependencies
 
 ### Arch Linux
 
