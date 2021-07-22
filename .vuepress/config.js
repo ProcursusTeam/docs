@@ -39,6 +39,7 @@ module.exports = {
       ['/', 'Home'],
       sidebar.find(x => x.title === 'Installation'),
       sidebar.find(x => x.title === 'Development'),
+      ['/Contribution.md', 'Contribution'],
     ],
   },
   plugins: [
