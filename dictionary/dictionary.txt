@@ -44,3 +44,13 @@ cctools-port
 config
 NodeJS
 procursus_utils
+repo
+Corellium
+patchfiles
+Saurik's
+Telesphoreo
+Makefiles
+Sileo
+subtype
+Diatrus
+Kirb
