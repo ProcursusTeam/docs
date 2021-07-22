@@ -13,6 +13,7 @@ A12X
 A12Z
 A13
 A14
+M1
 Odysseyra1n
 macOS
 Sur
@@ -26,3 +27,8 @@ cctools
 rustup
 ldid
 Vercel
+SDKs
+cctools-port
+config
+NodeJS
+procursus_utils
