@@ -4,7 +4,7 @@
 
 [Homepage](https://procurs.us/) | [Discord](https://discord.gg/QJDrrAJPDY) | [Twitter](https://twitter.com/procursusteam)
 
-A new, powerful, cross-compilation *OS bootstrap. At its core, Procursus is a build-system that provides a large set of consistently up-to-date *nix tools cross compiled to work on Darwin based platforms.
+A new, powerful, cross-compilation *OS bootstrap. At its core, Procursus is a build-system that provides a large set of consistently up-to-date \*nix tools cross compiled to work on Darwin based platforms.
 
 The build-system is built in a manner where maintenance of packages is fairly simple, helping to not fall behind upstream.
 
