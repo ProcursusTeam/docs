@@ -22,7 +22,7 @@ Building on FreeBSD, much like Linux support, is made possible with [cctools-por
 
         bash procursus-utils-fbsd.sh
 
-    It's recommended that you add this script to your shells' config file, so that it's sourced on every enviorment on login.
+    It's recommended that you add this script to your shells' config file, so that it's sourced on every login.
 
         echo "source procursus-utils-fbsd.sh" > .profile
 
