@@ -14,7 +14,7 @@ At its birth, this build-system was meant to be an APT repository included in a 
 
 In the iOS jailbreak scene, Procursus attempts to address an odd fragmentation problem seen over the past couple of years. Many new APT repositories have arisen from the ashes of Saurik's Telesphoreo, both with their respective flaws. One of the main issues is that each repository is targeted to one specific jailbreak.
 
-Procursus attempts to circumvent this by excluding hooking platforms or packages that provide code-injection, providing a "plug-and-play" experience for anyone who decides to use it on their specific project. In the context of iOS jailbreaks, this allows developers to provide and maintain their own hooking libraries, while we maintain core, system packages seperately.
+Procursus attempts to circumvent this by excluding hooking platforms or packages that provide code-injection, providing a "plug-and-play" experience for anyone who decides to use it on their specific project. In the context of iOS jailbreaks, this allows developers to provide and maintain their own hooking libraries, while we maintain core, system packages separately.
 
 ## Features
 
