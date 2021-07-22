@@ -23,8 +23,8 @@ Here are a few changes over other existing build-systems
 - Based on Makefiles, allowing parallel package building that is much quicker while also making easier to add new packages
 - Fully open-sourced (utilizing GNU tools) and open to community contribution. See [Contributing](#Contributing)
 - No jailbreak-specific software, making it easier to implement with other projects
-- **First ever build-system** to be fully functional with one of the main 4 package managers out of the box (e.g Sileo, Zebra), making easier to switch to your preferred package manager
-- Better Obj-C implementation of ``firmware.sh`` that's not only quicker, but also based on CPU subtype (e.g ``cy.cpu.arm64e``)
+- **First ever build-system** to be fully functional with any one of the main 4 package managers out of the box (e.g Sileo, Zebra), making easier to switch to your preferred package manager
+- Better Objective-C implementation of ``firmware.sh`` that's not only quicker, but also based on CPU subtype (e.g ``cy.cpu.arm64e``)
 
 ## Contributing
 
@@ -32,6 +32,6 @@ Contributions (Issues or Pull Requests) are welcome with open arms. Check out th
 
 ## Credits
 
-Build system created by [Diatrus](https://twitter.com/Diatrus) and [Kirb](https://twitter.com/hbkirb). Built better by all our wonderful contributors. Made worth it by people like you!
+Build system created by [Diatrus](https://twitter.com/Diatrus) and [hbkirb](https://twitter.com/hbkirb), and brought to greater heights by all our wonderful contributors. Made worth it by people like you!
 
 [![Vercel Logo](https://www.datocms-assets.com/31049/1618983297-powered-by-vercel.svg)](https://vercel.com/?utm_source=procursusteam&utm_campaign=oss)
