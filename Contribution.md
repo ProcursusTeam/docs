@@ -9,13 +9,13 @@ If you have any questions, or would like to contact team members, you can either
 
 ## Submitting Issues
 
-Any issue with the build system or a package on the APT repo can be submitted as a Github issue, and will be tracked as soon as possible.
+Any issue with the build system or a package on the APT repo can be submitted as a GitHub issue, and will be tracked as soon as possible.
 
 While there isn't an overbearing policy on how to properly submit issues, please be courteous and provide as much information about the situation as possible **in a cohesive matter.** Low effort or low info issues will be closed and marked as invalid.
 
 ## Contribution Process
 
-1. Fork the project and make changes relevant to what you're trying to add/fix — do this in a seperate branch in your fork
+1. Fork the project and make changes relevant to what you're trying to add/fix — do this in a separate branch in your fork
 2. Test your changes. If you're adding or updating a package, create a build of the package you added/updated and test it. We recommend that you do this on a **physical** device, though something like Corellium (and other simulating software) will do the trick as well
 3. Create a Pull Request for your changes in your specific branch — include a description of the change and where you tested your change
 
