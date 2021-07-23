@@ -32,6 +32,6 @@ Contributions (Issues or Pull Requests) are welcome with open arms. Check out th
 
 ## Credits
 
-Build system created by [Diatrus](https://twitter.com/Diatrus) and [hbkirb](https://twitter.com/hbkirb), and brought to greater heights by all our wonderful contributors. Made worth it by people like you!
+Build system created by [Diatrus](https://twitter.com/Diatrus) and [hbkirb](https://twitter.com/hbkirb), and brought to greater heights by all our wonderful contributors. And of course, this project is made worth it by people like you!
 
 [![Vercel Logo](https://www.datocms-assets.com/31049/1618983297-powered-by-vercel.svg)](https://vercel.com/?utm_source=procursusteam&utm_campaign=oss)
