@@ -57,10 +57,10 @@ export PREFIX=${HOME}/.local
 Then, create a directory of GNU binaries
 
 ```bash
-mkdir -p ${GNUBINDIR}
 COREUTILS='basename cat chgrp chmod chown chroot cksum comm cp csplit cut date dd df dir dircolors dirname du echo env expand expr factor false fmt fold groups head hostid hostname id install join kill link ln logname ls md5sum mkdir mkfifo mknod mv nice nl nohup od paste pathchk pinky pr printenv printf ptx pwd readlink rm rmdir seq sha1sum shred sleep sort split stat stty su sum sync tac tail tee test touch tr true tsort tty uname unexpand uniq unlink uptime users vdir wc who whoami yes'
 OTHER_GNU_BINS='make tar sed patch find'
 export GNUBINDIR="${PREFIX}/libexec/gnubin"
+mkdir - "${GNUBINDIR}"
 for util in $COREUTILS $OTHER_GNU_BINS; do
         ln -sfn /usr/local/bin/g$util "${GNUBINDIR}/${util}" 
 done
@@ -175,21 +175,22 @@ Next, you should remove `${GNUBINDIR}` from your PATH because many things in Fre
 
 The easiest way is to restart your shell.
 
+Then, add this to ~/.profile or the equivalent for your shell.
+
 ```bash
 # Add our toolchain to the path.
-# You should add this to your `.bash_profile` or the equivalent that your shell uses.
 export PATH=${PREFIX}/bin:${PATH}
 # This tells the Procursus makefile where to find the GNU binaries
 export GNUBINDIR="${PREFIX}/libexec/gnubin"
 ```
 
-You might want to restart your shell again to make sure everything went right.
+After that, run the above commands in your current shell or restart your shell.
 
 Then, try to build bash
 
 ```bash
-    cd Prpcursus
-    gmake bash-package
+cd Procursus
+gmake bash-package
 ```
 
 If the build is successful, congrats! You should now be able to compile packages from Procursus. Take note that because you're not using macOS, it's likely that some packages (particularly those that need Go, Python, and/or NodeJS) will fail to compile. You will need a macOS enabled computer to compile those.
