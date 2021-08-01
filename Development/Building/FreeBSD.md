@@ -1,5 +1,7 @@
 # Building on FreeBSD
+
 <!-- Building on FreeBSD, much like Linux support, is made possible with [cctools-port](https://github.com/tpoechtrager/cctools-port). To setup Procursus on FreeBSD -->
+
 ## Install dependencies
 
 ```sh
@@ -21,15 +23,21 @@ sudo mv triehash /usr/local/bin
 
 To run the script
 
-    bash procursus-utils-fbsd.sh
+```sh
+bash procursus-utils-fbsd.sh
+```
 
 It's recommended that you add this script to your shells' config file, so that it's sourced on every login.
 
-    echo "source procursus-utils-fbsd.sh" > ~/.profile
+```sh
+echo "source procursus-utils-fbsd.sh" > ~/.profile
+```
 
 Then, reload your shell or reload your shells' config file.
 
-    source procursus-utils-fbsd.sh
+```sh
+. procursus-utils-fbsd.sh
+```
 
 ## Manual install
 
@@ -156,7 +164,9 @@ ln -s ~/cctools/MacOSX-SDKs/MacOSX11.3.sdk ~/cctools/SDK/MacOSX.sdk
 
 Clone the Procursus repository
 
-    git clone --recursive https://github.com/ProcursusTeam/Procursus.git
+```sh
+git clone --recursive https://github.com/ProcursusTeam/Procursus.git
+```
 
 Next, you should remove `${GNUBINDIR}` from your PATH because many things in FreeBSD do not expect GNU binaries
 
