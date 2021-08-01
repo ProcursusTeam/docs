@@ -7,7 +7,7 @@ const { sidebar } = vuepressBar({
 
 module.exports = {
   title: 'Procursus',
-  description,
+  description: 'A new, powerful, cross-compilation *OS bootstrap.',
   head: [
     ['meta', {
       name: 'theme-color',
@@ -39,6 +39,7 @@ module.exports = {
       ['/', 'Home'],
       sidebar.find(x => x.title === 'Installation'),
       sidebar.find(x => x.title === 'Development'),
+      ['/Contribution.md', 'Contribution'],
     ],
   },
   plugins: [

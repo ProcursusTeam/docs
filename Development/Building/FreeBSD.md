@@ -4,6 +4,8 @@
 
 ## Install dependencies
 
+You can install dependencies with `pkg`
+
 ```sh
 sudo pkg autoconf automake bash cmake coreutils docbook-xsl dpkg fakeroot findutils gettext git gmake gnugrep gnupg gsed gtar libtool ncurses openssl patch perl5 pkgconf po4a python39 wget zstd
 ```
@@ -40,7 +42,7 @@ Then, reload your shell or reload your shells' config file.
 . procursus-utils-fbsd.sh
 ```
 
-## Manual install
+### Manual install
 
 If you want to install the toolchain manually for whatever reason,
 
@@ -71,7 +73,7 @@ Temporarily add it to PATH
 export PATH="${GNUBINDIR}"
 ```
 
-### Install libtapi
+#### Install libtapi
 
 ```bash
 export TAPI_VERSION=1100.0.11
@@ -96,7 +98,7 @@ pushd apple-libtapi-${TAPI_VERSION}/build
 popd
 ```
 
-### Installing cctools
+#### Installing cctools
 
 ```bash
 git clone https://github.com/tpoechtrager/cctools-port.git
@@ -120,7 +122,7 @@ make install
 make clean
 ```
 
-### Installing the clang wrapper
+#### Installing the clang wrapper
 
 ```bash
 wget -P /tmp https://github.com/ProcursusTeam/Procursus/raw/main/build_tools/wrapper.c
@@ -136,7 +138,7 @@ ln -f ${PREFIX}/bin/aarch64-apple-darwin ${PREFIX}/bin/x86_64-apple-darwin
 rm /tmp/wrapper.c
 ```
 
-### Installing ldid
+#### Installing ldid
 
 ```bash
 git clone git://git.saurik.com/ldid.git
@@ -148,7 +150,7 @@ mv -f ./ldid ${PREFIX}/bin/ldid
 chmod +x ${PREFIX}/bin/ldid
 ```
 
-### Get the SDKs
+#### Get the SDKs
 
 ```bash
 mkdir -p ~/cctools/{SDK,MacOSX-SDKs,iOS-SDKs}
@@ -161,7 +163,7 @@ git clone https://github.com/phracker/MacOSX-SDKs ~/cctools/MacOSX-SDKs
 ln -s ~/cctools/MacOSX-SDKs/MacOSX11.3.sdk ~/cctools/SDK/MacOSX.sdk 
 ```
 
-# Building Procursus
+## Building Procursus
 
 Clone the Procursus repository
 
@@ -190,7 +192,9 @@ Then, try to build bash
     gmake bash-package
 ```
 
-Then... well technically you are done. However, there are a few things that might find useful.
+If the build is successful, congrats! You should now be able to compile packages from Procursus. Take note that because you're not using macOS, it's likely that some packages (particularly those that need Go, Python, and/or NodeJS) will fail to compile. You will need a macOS enabled computer to compile those.
+
+In addition, there are a few things that you might find useful.
 
 ## Extras
 
@@ -234,3 +238,4 @@ ar = "aarch64-apple-darwin-ar"
 rustflags = ["-C", "link-args=-shared"]
 EOF
 ```
+
