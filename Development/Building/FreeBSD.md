@@ -17,6 +17,7 @@ sudo mv triehash /usr/local/bin
 ```
 
 ## Install toolchain
+
 ### Automatic install
 
 [This script](https://gist.github.com/asdfugil/71cdfca5aa1bc0d59de06518cd1c530c) will setup your SDKs, cctools-port with your iOS toolchain, and other dependencies needed.
