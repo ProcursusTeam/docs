@@ -4,8 +4,8 @@
 
 ```sh
 sudo pkg autoconf automake bash cmake coreutils docbook-xsl dpkg fakeroot findutils gettext git gmake gnugrep gnupg gsed gtar libtool ncurses openssl patch perl5 pkgconf po4a python39 wget zstd
-
 ```
+
 You'll also need to install `triehash`
 
 ```sh
@@ -17,19 +17,19 @@ sudo mv triehash /usr/local/bin
 ## Install toolchain
 ### Automatic install
 
-    [This script](https://gist.github.com/asdfugil/71cdfca5aa1bc0d59de06518cd1c530c) will setup your SDKs, cctools-port with your iOS toolchain, and other dependencies needed.
+[This script](https://gist.github.com/asdfugil/71cdfca5aa1bc0d59de06518cd1c530c) will setup your SDKs, cctools-port with your iOS toolchain, and other dependencies needed.
 
-    To run the script
+To run the script
 
-        bash procursus-utils-fbsd.sh
+    bash procursus-utils-fbsd.sh
 
-    It's recommended that you add this script to your shells' config file, so that it's sourced on every login.
+It's recommended that you add this script to your shells' config file, so that it's sourced on every login.
 
-        echo "source procursus-utils-fbsd.sh" > ~/.profile
+    echo "source procursus-utils-fbsd.sh" > ~/.profile
 
-    Then, reload your shell or reload your shells' config file.
+Then, reload your shell or reload your shells' config file.
 
-        source procursus-utils-fbsd.sh
+    source procursus-utils-fbsd.sh
 
 ## Manual install
 
@@ -110,6 +110,7 @@ make -j$(nproc)
 make install
 make clean
 ```
+
 ### Installing the clang wrapper
 
 ```bash
@@ -155,7 +156,7 @@ ln -s ~/cctools/MacOSX-SDKs/MacOSX11.3.sdk ~/cctools/SDK/MacOSX.sdk
 
 Clone the Procursus repository
 
-        git clone --recursive https://github.com/ProcursusTeam/Procursus.git
+    git clone --recursive https://github.com/ProcursusTeam/Procursus.git
 
 Next, you should remove `${GNUBINDIR}` from your PATH because many things in FreeBSD do not expect GNU binaries
 
