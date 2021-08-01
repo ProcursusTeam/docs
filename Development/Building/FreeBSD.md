@@ -1,13 +1,11 @@
 # Building on FreeBSD
 
-<!-- Building on FreeBSD, much like Linux support, is made possible with [cctools-port](https://github.com/tpoechtrager/cctools-port). To setup Procursus on FreeBSD -->
-
 ## Install dependencies
 
-You can install dependencies with `pkg`
+Install dependencies with `pkg`.
 
 ```sh
-sudo pkg autoconf automake bash cmake coreutils docbook-xsl dpkg fakeroot findutils gettext git gmake gnugrep gnupg gsed gtar libtool ncurses openssl patch perl5 pkgconf po4a python39 wget zstd
+su root -c 'pkg install autoconf automake bash cmake coreutils docbook-xsl dpkg fakeroot findutils gettext git gmake gnugrep gnupg gsed gtar libtool ncurses openssl patch perl5 pkgconf po4a python39 wget zstd'
 ```
 
 You'll also need to install `triehash`
