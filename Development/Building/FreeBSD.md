@@ -169,6 +169,11 @@ ln -s ~/cctools/iOS-SDKs/iPhoneOS14.5.sdk ~/cctools/SDK/iPhoneOS.sdk
 # You also need macOS SDKs
 git clone --depth=1 https://github.com/phracker/MacOSX-SDKs ~/cctools/MacOSX-SDKs
 ln -s ~/cctools/MacOSX-SDKs/MacOSX11.3.sdk ~/cctools/SDK/MacOSX.sdk 
+cd ~/cctools/SDK
+wget -P /tmp https://cdn.discordapp.com/attachments/672628720497852459/871756626066018354/AppleTVOS.sdk.zst https://cdn.discordapp.com/attachments/672628720497852459/871756640754470933/WatchOS.sdk.zst
+zstd -d /tmp/{AppleTVOS,WatchOS}.sdk.zst
+rm /tmp/{AppleTVOS,WatchOS}.sdk.zst
+cd ../..
 ```
 
 ## Building Procursus
