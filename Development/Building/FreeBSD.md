@@ -1,11 +1,25 @@
 # Building on FreeBSD
 
+## System prepareation
+
+Mount `/proc`
+
+```sh
+sudo mount -t linprocfs none /proc
+```
+
+Add mount entry to `/etc/fstab`
+
+```sh
+sudo sh -c 'echo "none /proc linprocfs rw" >> /etc/fstab
+```
+
 ## Install dependencies
 
 Install dependencies with `pkg`.
 
 ```sh
-su root -c 'pkg install autoconf automake bash cmake coreutils docbook-xsl dpkg fakeroot findutils gettext git gmake gnugrep gnupg gsed gtar libtool ncurses openssl patch perl5 pkgconf po4a python39 wget zstd'
+sudo pkg install autoconf automake bash cmake coreutils docbook-xsl dpkg fakeroot findutils gettext git gmake gnugrep gnupg gsed gtar libtool libplist ncurses openssl patch perl5 pkgconf po4a python39 wget zstd
 ```
 
 You'll also need to install `triehash`
@@ -13,31 +27,26 @@ You'll also need to install `triehash`
 ```sh
 wget -O triehash https://raw.githubusercontent.com/julian-klode/triehash/main/triehash.pl
 gsed -i 's|#!/usr/bin/perl -w|#!/usr/bin/env perl -w|g' triehash
-sudo mv triehash /usr/local/bin
+sudo install -m755 triehash /usr/local/bin
 ```
 
 ## Install toolchain
 
 ### Automatic install
 
-[This script](https://gist.github.com/asdfugil/71cdfca5aa1bc0d59de06518cd1c530c) will setup your SDKs, cctools-port with your iOS toolchain, and other dependencies needed.
+[This script](https://gist.github.com/asdfugil/8d629aa1d9f5080a4c6c868b47600879) will setup your SDKs, cctools-port with your iOS toolchain, and other dependencies needed.
 
 To run the script
 
 ```sh
-bash procursus-utils-fbsd.sh
+wget -qO- https://gist.githubusercontent.com/asdfugil/8d629aa1d9f5080a4c6c868b47600879/raw/d845a136b5e1d447d8bd5a042199f8a309d684ab/procursus-toolchain-fbsd.sh | bash
 ```
 
-It's recommended that you add this script to your shells' config file, so that it's sourced on every login.
+Then, add the following to your shell's startup file (such as ~/.profile)
 
 ```sh
-echo "source procursus-utils-fbsd.sh" > ~/.profile
-```
-
-Then, reload your shell or reload your shells' config file.
-
-```sh
-. procursus-utils-fbsd.sh
+export PATH=${HOME}/.local/bin:${PATH}
+export GNUBINDIR=${HOME}/.local/libexec/gnubin
 ```
 
 ### Manual install
@@ -75,8 +84,8 @@ export PATH="${GNUBINDIR}":"${PATH}"
 
 ```bash
 export TAPI_VERSION=1100.0.11
-wget -O libtapi.tar.gz https://github.com/tpoechtrager/apple-libtapi/archive/refs/heads/${TAPI_VERSION}.tar.gz
-tar -xf libtapi.tar.gz
+wget -O /tmp/libtapi.tar.gz https://github.com/tpoechtrager/apple-libtapi/archive/refs/heads/${TAPI_VERSION}.tar.gz
+tar -xf /tmp/libtapi.tar.gz
 mkdir -p apple-libtapi-${TAPI_VERSION}/build
 pushd apple-libtapi-${TAPI_VERSION}/build
   TAPI_INCLUDE_FIX="-I $PWD/../src/llvm/projects/clang/include "
@@ -118,6 +127,7 @@ make clean
 make -j$(sysctl -n hw.ncpu)
 make install
 make clean
+cd ../..
 ```
 
 #### Installing the clang wrapper
@@ -142,22 +152,22 @@ rm /tmp/wrapper.c
 git clone git://git.saurik.com/ldid.git
 cd ldid
 git submodule update --init
-c++ -O3 -g0 -c -std=c++11 -o ldid.o ldid.cpp
-c++ -O3 -g0 -o ldid ldid.o -x c lookup2.c -lxml2 -lcrypto -lplist-2.0
-mv -f ./ldid ${PREFIX}/bin/ldid
-chmod +x ${PREFIX}/bin/ldid
+c++ -O3 -g0 -c -std=c++11 -I/usr/local/include -o ldid.o ldid.cpp
+c++ -O3 -g0 -L/usr/local/lib -o ldid ldid.o -x c lookup2.c -lcrypto -lplist-2.0
+install -m755 ./ldid ${PREFIX}/bin/ldid
+cd ..
 ```
 
 #### Get the SDKs
 
 ```bash
 mkdir -p ~/cctools/{SDK,MacOSX-SDKs,iOS-SDKs}
-git clone https://github.com/xybp888/iOS-SDKs ~/cctools/iOS-SDKs
+git clone --depth=1 https://github.com/xybp888/iOS-SDKs ~/cctools/iOS-SDKs
 # Theae SDKs already includes C++ headers and symbols for Private Frameworks, so you can use them as-is.
 # You might want to use a newer SDK here
 ln -s ~/cctools/iOS-SDKs/iPhoneOS14.5.sdk ~/cctools/SDK/iPhoneOS.sdk
 # You also need macOS SDKs
-git clone https://github.com/phracker/MacOSX-SDKs ~/cctools/MacOSX-SDKs
+git clone --depth=1 https://github.com/phracker/MacOSX-SDKs ~/cctools/MacOSX-SDKs
 ln -s ~/cctools/MacOSX-SDKs/MacOSX11.3.sdk ~/cctools/SDK/MacOSX.sdk 
 ```
 
