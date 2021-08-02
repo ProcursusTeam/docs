@@ -1,6 +1,6 @@
 # Building on FreeBSD
 
-## System prepareation
+## System preparation
 
 Mount `/proc`
 
