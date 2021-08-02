@@ -58,7 +58,7 @@ Then, create a directory of GNU binaries
 COREUTILS='basename cat chgrp chmod chown chroot cksum comm cp csplit cut date dd df dir dircolors dirname du echo env expand expr factor false fmt fold groups head hostid hostname id install join kill link ln logname ls md5sum mkdir mkfifo mknod mv nice nl nohup od paste pathchk pinky pr printenv printf ptx pwd readlink rm rmdir seq sha1sum shred sleep sort split stat stty su sum sync tac tail tee test touch tr true tsort tty uname unexpand uniq unlink uptime users vdir wc who whoami yes'
 OTHER_GNU_BINS='make tar sed patch find'
 export GNUBINDIR="${PREFIX}/libexec/gnubin"
-mkdir - "${GNUBINDIR}"
+mkdir -p "${GNUBINDIR}"
 for util in $COREUTILS $OTHER_GNU_BINS; do
         ln -sfn /usr/local/bin/g$util "${GNUBINDIR}/${util}" 
 done
@@ -68,7 +68,7 @@ ln -sfn /usr/local/bin/grep "${GNUBINDIR}/grep"
 Temporarily add it to PATH
 
 ```bash
-export PATH="${GNUBINDIR}"
+export PATH="${GNUBINDIR}":"${PATH}"
 ```
 
 #### Install libtapi
@@ -76,7 +76,7 @@ export PATH="${GNUBINDIR}"
 ```bash
 export TAPI_VERSION=1100.0.11
 wget -O libtapi.tar.gz https://github.com/tpoechtrager/apple-libtapi/archive/refs/heads/${TAPI_VERSION}.tar.gz
-tar -xf ${TAPI_VERSION}.tar.gz
+tar -xf libtapi.tar.gz
 mkdir -p apple-libtapi-${TAPI_VERSION}/build
 pushd apple-libtapi-${TAPI_VERSION}/build
   TAPI_INCLUDE_FIX="-I $PWD/../src/llvm/projects/clang/include "
@@ -91,8 +91,8 @@ pushd apple-libtapi-${TAPI_VERSION}/build
     -DTAPI_INCLUDE_TESTS=OFF \
     -DLLVM_INCLUDE_TESTS=OFF
 
-  make -j$(nproc) clangBasic libtapi
-  make -j$(nproc) install-libtapi install-tapi-headers
+  make -j$(sysctl -n hw.ncpu) clangBasic libtapi
+  make -j$(sysctl -n hw.ncpu) install-libtapi install-tapi-headers
 popd
 ```
 
@@ -106,7 +106,7 @@ cd cctools-port/cctools
   --prefix=${PREFIX} \
   --with-libtapi=${PREFIX} \
   --target=aarch64-apple-darwin
-make -j$(nproc)
+make -j$(sysctl -n hw.ncpu)
 make install
 make clean
 
@@ -115,7 +115,7 @@ make clean
   --prefix=${PREFIX} \
   --with-libtapi=${PREFIX} \
   --target=x86_64-apple-darwin
-make -j$(nproc)
+make -j$(sysctl -n hw.ncpu)
 make install
 make clean
 ```
