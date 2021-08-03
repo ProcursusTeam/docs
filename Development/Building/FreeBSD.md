@@ -51,9 +51,7 @@ export GNUBINDIR=${HOME}/.local/libexec/gnubin
 
 ### Manual install
 
-If you want to install the toolchain manually for whatever reason,
-
-Export the location where you want to install the toolchain.
+If you want to install the toolchain manually for whatever reason, begin with exporting the location where you want to install the toolchain.
 
 ```bash
 export PREFIX=${HOME}/.local
