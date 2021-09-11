@@ -2,7 +2,7 @@
 
 ```{toctree}
 :hidden:
-:caption: Contents
+:caption: Development
 
 development/functions.md
 ```

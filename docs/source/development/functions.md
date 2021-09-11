@@ -2,7 +2,6 @@
 
 ```{toctree}
 :hidden:
-:caption: Functions
 
 functions/SIGN.md
 functions/PACK.md
