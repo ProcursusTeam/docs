@@ -1,12 +1,16 @@
 # `GITHUB_ARCHIVE`
 
-This function is used to download a compressed tarball archive of any Github repository (as long as it's public).
+This function is used to download a compressed tarball archive of any
+Github repository (as long as it's public).
 
-The compressed tarball can include files of a project, which can be used to compile the project. The function is often used alongside [`EXTRACT_TAR`](EXTRACT_TAR).
+The compressed tarball can include files of a project, which can be
+used to compile the project. The function is often used alongside
+[`EXTRACT_TAR`](EXTRACT_TAR).
 
 ## Arguements
 
-The following table showcases documentation for specific arguments of the function
+The following table showcases documentation for specific arguments of
+the function
 
 | Index | Status | Description |
 |-------|--------|-------------|
@@ -18,7 +22,8 @@ The following table showcases documentation for specific arguments of the functi
 
 ## Examples
 
-There are many ways in which you can manipulate this specific function in your Makefile. The examples below showcase most instances
+There are many ways in which you can manipulate this specific function
+in your Makefile. The examples below showcase most instances
 
 ### Tag example
 

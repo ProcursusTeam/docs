@@ -11,9 +11,11 @@ functions/GIT_CLONE.md
 functions/EXTRACT_TAR.md
 ```
 
-This specific page documents functions used in all Procursus packages, each having its purpose.
+This specific page documents functions used in all Procursus packages,
+each having its purpose.
 
-The table below showcases current functions across all Procursus projects, and where to use them when creating a new package.
+The table below showcases current functions across all Procursus
+projects, and where to use them when creating a new package.
 
 | Function | Description | Used in |
 |----------|-------------|---------|

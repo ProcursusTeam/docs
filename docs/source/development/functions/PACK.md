@@ -1,8 +1,11 @@
 # `PACK`
 
-This function creates a Debian package with `dpkg` or `dm.pl` for the project that is being built.
+This function creates a Debian package with `dpkg` or `dm.pl` for the
+project that is being built.
 
-The function packages files that relate to a specific project, and adds required metadata about the package to its designated control file, such as the version number.
+The function packages files that relate to a specific project, and adds
+required metadata about the package to its designated control file,
+such as the version number.
 
 ## Arguments
 
@@ -20,4 +23,6 @@ The following table documents specific arguments of the funtion
 
     $(call PACK,youtube-dl,DEB_YOUTUBE_DL_V)
 
-The example above packs files relating to `youtube-dl` (which would be in `build_dist/youtube-dl`), and replaces `DEB_YOUTUBE_DL_V` in the control file with the version number assigned to that variable.
+The example above packs files relating to `youtube-dl` (which would be
+in `build_dist/youtube-dl`), and replaces `DEB_YOUTUBE_DL_V` in the
+control file with the version number assigned to that variable.
