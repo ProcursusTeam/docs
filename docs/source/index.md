@@ -5,6 +5,7 @@
 :caption: Development
 
 development/functions.md
+development/variables.md
 ```
 
 A powerful, cross-compilation *OS bootstrap/build system, providing a large set
