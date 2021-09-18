@@ -4,7 +4,15 @@ This specific section documents specific build flags and variables that
 can be used to build packages distributed by Procursus, and can all be
 found within the main `Makefile`.
 
-The table below showcases all available variables
+```{warning}
+Not each variable requires user input. Some variables can be used
+within the Makefile of a specific package; consider this section as
+the main table you can refer back to when adding a new package or
+building existing packages.
+```
+
+The table below showcases all available variables. Variables marked as
+"required" are left to the user to setup.
 
 | Variable | Required | Function | Example |
 |----------|----------|----------|---------|
