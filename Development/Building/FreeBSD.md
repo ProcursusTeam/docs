@@ -1,19 +1,5 @@
 # Building on FreeBSD
 
-## System preparation
-
-Mount `/proc`
-
-```sh
-sudo mount -t procfs none /proc
-```
-
-Add mount entry to `/etc/fstab`
-
-```sh
-sudo sh -c 'echo "none /proc linprocfs rw" >> /etc/fstab
-```
-
 ## Install dependencies
 
 Install dependencies with `pkg`.
