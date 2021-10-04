@@ -5,7 +5,7 @@
 Mount `/proc`
 
 ```sh
-sudo mount -t linprocfs none /proc
+sudo mount -t procfs none /proc
 ```
 
 Add mount entry to `/etc/fstab`
