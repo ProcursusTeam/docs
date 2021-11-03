@@ -1,5 +1,7 @@
 Diatrus
 Makefile
+makefile
+makefiles
 Procursus
 A7
 A8
@@ -55,3 +57,7 @@ Sileo
 subtype
 Kirb
 hbkirb
+zst
+autotools
+Debianization
+Debianisation
