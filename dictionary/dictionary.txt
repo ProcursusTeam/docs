@@ -61,3 +61,5 @@ zst
 autotools
 Debianization
 Debianisation
+MacStadium
+Tutanota
