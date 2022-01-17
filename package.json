@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ProcususTeam/docs.git"
+    "url": "git+https://github.com/ProcursusTeam/docs.git"
   },
   "author": "ProcursusTeam",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ProcususTeam/docs/issues"
+    "url": "https://github.com/ProcursusTeam/docs/issues"
   },
-  "homepage": "https://github.com/ProcususTeam/docs#readme",
+  "homepage": "https://github.com/ProcursusTeam/docs#readme",
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "^1.8.2",
     "markdown-it-multimd-table": "^4.1.0",
