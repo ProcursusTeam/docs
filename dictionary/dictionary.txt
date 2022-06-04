@@ -63,3 +63,8 @@ Debianization
 Debianisation
 MacStadium
 Tutanota
+youtube-dl
+SHA1
+SHA256
+SHA384
+SHA512
