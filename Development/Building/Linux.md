@@ -108,6 +108,7 @@ sed -i 's/add_execute_list_with_prefix("ranlib");/add_execute_list_with_prefix("
   --enable-tapi-support \
   --program-prefix=cctools- \
   CFLAGS="-I${PREFIX}/include" \
+  CXXFLAGS="-I${PREFIX}/include" \
   LDFLAGS="-L${PREFIX}/lib"
 make -j$(nproc)
 make -j$(nproc) install
