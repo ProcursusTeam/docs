@@ -5,7 +5,7 @@ Community involvement is one of the main goals of this project, so we're glad yo
 If you have any questions, or would like to contact team members, you can either
 
 - Email [Hayden](mailto:me@diatr.us) about your issue/concern (or annoy him on [Twitter](https://twitter.com/Diatrus)), or..
-- Join [Hayden's Discord Server](https://diatr.us/discord), where most team members are capable of providing support and answering questions
+- Join [The Procursus Discord Server](https://diatr.us/discord), where most team members are capable of providing support and answering questions
 
 ## Submitting Issues
 
