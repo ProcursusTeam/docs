@@ -133,12 +133,10 @@ rm /tmp/wrapper.c
 #### Installing ldid
 
 ```bash
-git clone git://git.saurik.com/ldid.git
+git clone https://github.com/ProcursusTeam/ldid.git
 cd ldid
-git submodule update --init
-c++ -O3 -g0 -c -std=c++11 -I/usr/local/include -o ldid.o ldid.cpp
-c++ -O3 -g0 -L/usr/local/lib -o ldid ldid.o -x c lookup2.c -lcrypto -lplist-2.0
-install -m755 ./ldid ${PREFIX}/bin/ldid
+make -j$(nproc)
+make -j$(nproc) install
 cd ..
 ```
 
