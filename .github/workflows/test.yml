@@ -11,17 +11,17 @@ jobs:
     name: Lint
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
       with:
         fetch-depth: '0'
         persist-credentials: false
 
-    - uses: actions/setup-node@v2
+    - uses: actions/setup-node@v3
       with:
         node-version: '16'
 
     - name: Cache pnpm modules
-      uses: actions/cache@v2
+      uses: actions/cache@v3
       with:
         path: ~/.pnpm-store
         key: build-${{ hashFiles('**/pnpm-lock.yaml') }}
@@ -33,7 +33,7 @@ jobs:
         version: 6.0.2
         run_install: true
 
-    - uses: xt0rted/markdownlint-problem-matcher@v1
+    - uses: xt0rted/markdownlint-problem-matcher@v2
 
     - name: Lint
       run: pnpm run lint
@@ -42,17 +42,17 @@ jobs:
     name: Spellcheck
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
       with:
         fetch-depth: '0'
         persist-credentials: false
 
-    - uses: actions/setup-node@v2
+    - uses: actions/setup-node@v3
       with:
         node-version: '16'
 
     - name: Cache pnpm modules
-      uses: actions/cache@v2
+      uses: actions/cache@v3
       with:
         path: ~/.pnpm-store
         key: build-${{ hashFiles('**/pnpm-lock.yaml') }}
@@ -71,17 +71,17 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
       with:
         fetch-depth: '0'
         persist-credentials: false
 
-    - uses: actions/setup-node@v2
+    - uses: actions/setup-node@v3
       with:
         node-version: '16'
 
     - name: Cache pnpm modules
-      uses: actions/cache@v2
+      uses: actions/cache@v3
       with:
         path: ~/.pnpm-store
         key: build-${{ hashFiles('**/pnpm-lock.yaml') }}
