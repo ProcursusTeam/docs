@@ -16,6 +16,7 @@ A12X
 A12Z
 A13
 A14
+A15
 CoreFoundation
 GPG
 SDK
@@ -26,6 +27,7 @@ config
 NodeJS
 M1
 Odysseyra1n
+palera1n
 macOS
 Sur
 GitHub
@@ -33,6 +35,8 @@ GITHUB_ARCHIVE
 Procursus-enabled
 Homebrew
 Taurine
+meowbrek2
+Def1nit3lyN0tAJa1lbr3akTool
 FreeBSD
 triehash
 AUR
