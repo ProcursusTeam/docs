@@ -17,6 +17,8 @@ A12Z
 A13
 A14
 A15
+A16
+A17
 CoreFoundation
 GPG
 SDK
@@ -26,6 +28,8 @@ cctools-port
 config
 NodeJS
 M1
+M2
+M3
 Odysseyra1n
 palera1n
 macOS
